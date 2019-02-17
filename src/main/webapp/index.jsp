@@ -1,9 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <title>GitHub Salesforce Deploy Tool</title>
-	<script src="/resources/js/jquery-1.7.1.min.js"></script>
-	<script src="/resources/js/purl.js"></script>
+		<title>GitHub Salesforce Deploy Tool</title>
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.js"></script>
 	<link rel="stylesheet" type="text/css" href="/resources/assets/styles/salesforce-lightning-design-system.css">
 </head>
 
@@ -17,6 +20,7 @@ function githubdeploy()
 			'https://githubsfdeploy.herokuapp.com/app/githubdeploy' :
 			'https://githubsfdeploy-sandbox.herokuapp.com/app/githubdeploy';
 	sfdeployurl+= '/' + $('#owner').val() + '/' + $('#repo').val() + (ref != '' ? '?ref=' + ref : '');
+	console.log(sfdeployurl);
 	window.location = sfdeployurl;
 }
 function togglebuttoncode()
@@ -44,10 +48,13 @@ function updatebuttonhtml()
 function load()
 {
 	// Default from URL
-	var owner = $.url().param('owner');
+	/*var owner = $.url().param('owner');
 	var repo = $.url().param('repo');
 	var ref = $.url().param('ref');
-
+	*/
+	var owner = 'lovesingh25';
+	var repo = 'sfDeloyButton';
+	var ref = 'master';
 	// Check for GitHub referrer?			
 	if(owner==null && repo==null) {
 		var referrer = document.referrer;
