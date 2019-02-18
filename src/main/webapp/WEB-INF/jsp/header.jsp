@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>GitHub Salesforce Deploy Tool</title>
-	<link rel="stylesheet" type="text/css" href="/resources/assets/styles/salesforce-lightning-design-system.css">
+	<link rel="stylesheet" type="text/css" href="salesforce-lightning-design-system.css">
 </head>
 
 <body style="margin:10px">

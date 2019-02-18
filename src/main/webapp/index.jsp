@@ -1,27 +1,29 @@
 <!doctype html>
 <html>
 <head>
-		<title>GitHub Salesforce Deploy Tool</title>
-		<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.js"></script>
-	<link rel="stylesheet" type="text/css" href="/resources/assets/styles/salesforce-lightning-design-system.css">
+		<title>GitHub Salesforce Deploy Tool Sup2</title>
+		<script src="resources/js/jquery-1.7.1.min.js"></script>
+		<script src="resources/js/purl.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/assets/styles/salesforce-lightning-design-system.css">
 </head>
 
 <script>
-var appName = ''
+var appName = 'http://localhost:8080/githubsfdeploy_war_exploded';
+var owner = 'lovesingh25';
+	var repo = 'sfDeloyButton';
+	var ref = 'master';
+
 function githubdeploy()
 {
-    var ref = $('#ref').val();    
-	var sfdeployurl =
-		$('#production').attr('checked') ?
-			'https://githubsfdeploy.herokuapp.com/app/githubdeploy' :
-			'https://githubsfdeploy-sandbox.herokuapp.com/app/githubdeploy';
-	sfdeployurl+= '/' + $('#owner').val() + '/' + $('#repo').val() + (ref != '' ? '?ref=' + ref : '');
-	console.log(sfdeployurl);
-	window.location = sfdeployurl;
+   // var ref = $('#ref').val();    
+	//var sfdeployurl =
+		//$('#production').attr('checked') ?
+		//	'https://githubsfdeploy.herokuapp.com/app/githubdeploy' :
+		//	'https://githubsfdeploy-sandbox.herokuapp.com/app/githubdeploy';
+//	sfdeployurl+= '/' + $('#owner').val() + '/' + $('#repo').val() + (ref != '' ? '?ref=' + ref : '');
+	var sfdeployurl = appName+'?owner=' + owner +'&repo=' + repo +'&ref=' + ref+'"';
+//	alert(sfdeployurl);
+	window.location ='http://localhost:8080/githubsfdeploy_war_exploded/app/githubdeploy/lovesingh25/sfDeloyButton?ref=master';
 }
 function togglebuttoncode()
 {
@@ -33,16 +35,18 @@ function togglebuttoncode()
 }
 function updatebuttonhtml()
 {
-	var repoOwner = $('#owner').val();
-	var repoName = $('#repo').val();
-	var ref = $('#ref').val();
-	var buttonhtml =
+	
+	/*var buttonhtml =
 		( $('#blogpaste').attr('checked') == 'checked' ? 
 			'<a href="https://githubsfdeploy.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
 			'<a href="https://githubsfdeploy.herokuapp.com">\n') +					
 			'  <img alt="Deploy to Salesforce"\n' +
 			'       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">\n' +
 		'</a>';
+		*/
+		console.log('This is app name '+appName);
+		var buttonhtml ='<a href="'+appName+'?owner=' + owner +'&repo=' + repo +'&ref=' + ref+'"></a>';
+		
 	$('#buttonhtml').text(buttonhtml);
 }
 function load()
@@ -52,9 +56,7 @@ function load()
 	var repo = $.url().param('repo');
 	var ref = $.url().param('ref');
 	*/
-	var owner = 'lovesingh25';
-	var repo = 'sfDeloyButton';
-	var ref = 'master';
+	
 	// Check for GitHub referrer?			
 	if(owner==null && repo==null) {
 		var referrer = document.referrer;

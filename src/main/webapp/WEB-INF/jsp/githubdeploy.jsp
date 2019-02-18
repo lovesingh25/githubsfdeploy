@@ -136,7 +136,7 @@
 	<div id="githubcontents"></div>
 </c:if>
 
-<script src="/resources/js/jquery-1.7.1.min.js"></script>
+<script src="jquery-1.7.1.min.js"></script>
 <c:if test="${githubcontents != null}">
 	<script type="text/javascript">
 
