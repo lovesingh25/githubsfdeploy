@@ -122,45 +122,21 @@ function load()
 <div class="slds-form-element">
 	<label class="slds-form-element__label">Owner:</label>
 	<div class="slds-form-element__control">
-		<input id="owner" oninput="updatebuttonhtml();"/>
+		<output id="owner"/>
 	</div>
 </div>
 <div class="slds-form-element">
 	<label class="slds-form-element__label">Repository:</label>
 	<div class="slds-form-element__control">
-	<input id="repo" oninput="updatebuttonhtml();"/>
+	<output id="repo"/>
 	</div>
 </div>
 <div class="slds-form-element">
     <label class="slds-form-element__label">Branch/Tag/Commit:</label>
     <div class="slds-form-element__control">
-    <input id="ref" oninput="updatebuttonhtml();"/>
+    <output id="ref"/>
     </div>
 </div>
-<div class="slds-form-element">
-    <div class="slds-form-element__control">
-      <label class="slds-checkbox">
-        <input type="checkbox" name="options" id="showbuttoncode" onclick="togglebuttoncode();" />
-        <span class="slds-checkbox--faux"></span>
-        <span class="slds-form-element__label">Button Code</span>
-      </label>
-    </div>
-</div>
-</div>
-<div id="buttoncodepanel" style="display:none">
-	<div class="slds-form--horizontal">
-		<div class="slds-form-element">
-		<div class="slds-form-element__control">
-			<label class="slds-checkbox">
-				<input id="blogpaste" type="checkbox" onclick="updatebuttonhtml();"/>
-		        <span class="slds-checkbox--faux"></span>
-		        <span class="slds-form-element__label">Use Specified Owner and Repository (when not GitHub README)</span>
-			</label>
-		</div>
-		</div>
-	</div>
-	<pre id="buttonhtml"></pre>
-	<p><img src="/resources/img/deploy.png"/></p>
 </div>
 
 </form>
