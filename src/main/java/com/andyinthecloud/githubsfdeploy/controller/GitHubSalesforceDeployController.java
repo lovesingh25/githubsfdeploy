@@ -284,8 +284,14 @@ public class GitHubSalesforceDeployController {
 			Map<String,Object> map,
 			HttpSession session) throws Exception
 	{
-		String accessToken = (String)session.getAttribute(GITHUB_TOKEN);
-
+		String accessToken;
+			//Set Personal Token in GitHub to avoid logging in.
+			if((String)System.getenv(GITHUB_TOKEN) != null){
+					accessToken = (String)System.getenv(GITHUB_TOKEN);
+			}
+			else{
+					accessToken = (String)session.getAttribute(GITHUB_TOKEN);
+			}
 		GitHubClient client;
 
 		if(accessToken == null)
