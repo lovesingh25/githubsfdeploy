@@ -1,14 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <title>Deploy to your org</title>
-	<script src="/resources/js/jquery-1.7.1.min.js"></script>
+  <title>Deploy to your org</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="/resources/js/purl.js"></script>
 	<link rel="stylesheet" type="text/css" href="/resources/assets/styles/salesforce-lightning-design-system.css">
 </head>
 
 <script>
-var appName = ''
 var ownerName ='';
 var repoName  ='';
 var refName  ='';
