@@ -131,7 +131,14 @@ public class GitHubSalesforceDeployController {
 
 		ObjectMapper mapper = new ObjectMapper();
 		TokenResult tokenResult = (TokenResult) mapper.readValue(gitHubResponse.toString(), TokenResult.class);
-		session.setAttribute(GITHUB_TOKEN, tokenResult.access_token);
+		//Set Personal Token in GitHub to avoid logging in.
+			if((String)System.getenv(GITHUB_TOKEN) != null){
+					session.setAttribute(GITHUB_TOKEN, (String)System.getenv(GITHUB_TOKEN));
+			}
+			else{
+					session.setAttribute(GITHUB_TOKEN, tokenResult.access_token);
+			}
+
 		String redirectUrl = state;
 		return "redirect:" + redirectUrl;
 	}
