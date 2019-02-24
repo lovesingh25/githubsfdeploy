@@ -9,75 +9,29 @@
 
 <script>
 var appName = ''
+var ownerName ='';
+var repoName  ='';
+var refName  ='';
+
 function githubdeploy()
 {
-    var ref = $('#ref').val();    
 	var sfdeployurl =
 		$('#production').attr('checked') ?
 			'https://coelibrary.herokuapp.com/app/githubdeploy' :
 			'https://coelibrary-sandbox.herokuapp.com/app/githubdeploy';
-	sfdeployurl+= '/' + $('#owner').val() + '/' + $('#repo').val() + (ref != '' ? '?ref=' + ref : '');
+	sfdeployurl+= '/' + ownerName + '/' + repoName + (refName != '' ? '?ref=' + refName : '');
 	window.location = sfdeployurl;
 }
-function togglebuttoncode()
-{
-	updatebuttonhtml();
-	if($('#showbuttoncode').attr('checked') == 'checked')
-		$('#buttoncodepanel').show();
-	else
-		$('#buttoncodepanel').hide();
-}
-function updatebuttonhtml()
-{
-	var repoOwner = $('#owner').val();
-	var repoName = $('#repo').val();
-	var ref = $('#ref').val();
-	var buttonhtml =
-		( $('#blogpaste').attr('checked') == 'checked' ? 
-			'<a href="https://coelibrary.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
-			'<a href="https://coelibrary.herokuapp.com">\n') +					
-			'  <img alt="Deploy to Salesforce"\n' +
-			'       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">\n' +
-		'</a>';
-	$('#buttonhtml').text(buttonhtml);
-}
+
 function load()
 {
-	// Default from URL
-	var owner = $.url().param('owner');
-	var repo = $.url().param('repo');
-	var ref = $.url().param('ref');
 
-	// Check for GitHub referrer?			
-	if(owner==null && repo==null) {
-		var referrer = document.referrer;
-		// Note this is not passed from private repos or to http://localhost
-		// https://github.com/afawcett/githubdeploytest
-		if(referrer!=null && referrer.startsWith('https://github.com')) {		
-			var parts = referrer.split('/');
-			if(parts.length >= 5) {
-				owner = parts[3];
-				repo = parts[4];
-			}
-			if(parts.length >= 7) {
-			    // Branch/Tag/Release?
-                // https://github.com/afawcett/githubdeploytest/tree/BranchA
-                // https://github.com/afawcett/githubdeploytest/tree/Branch/B
-			    if(parts[5] == 'tree') {
-			        ref = referrer.substr(referrer.indexOf('/tree/')+6);
-			    }
-			}
-		}		
-	}
-	
-	// Default fields
-	$('#owner').val(owner);
-	$('#repo').val(repo);
-	$('#ref').val(ref);
-	
-	
-	$('#login').focus();
-	updatebuttonhtml();
+	// Default from URL
+	ownerName = $.url().param('owner');
+	repoName = $.url().param('repo');
+	refName = $.url().param('ref');
+
+
 }
 </script>
 
@@ -118,24 +72,6 @@ function load()
 		<span class="slds-form-element__label">Sandbox</span>
 	</label>
 	</div>
-</div>
-<div class="slds-form-element">
-	<label class="slds-form-element__label">Owner:</label>
-	<div class="slds-form-element__control">
-		<output id="owner"/>
-	</div>
-</div>
-<div class="slds-form-element">
-	<label class="slds-form-element__label">Repository:</label>
-	<div class="slds-form-element__control">
-	<output id="repo"/>
-	</div>
-</div>
-<div class="slds-form-element">
-    <label class="slds-form-element__label">Branch/Tag/Commit:</label>
-    <div class="slds-form-element__control">
-    <output id="ref"/>
-    </div>
 </div>
 </div>
 
