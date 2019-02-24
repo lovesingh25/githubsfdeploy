@@ -13,9 +13,9 @@ var repoName  ='';
 var refName  ='';
 
 function githubdeploy()
-{
+{	
 	var sfdeployurl =
-		$('#production').attr('checked') ?
+	($('input[name="environment"]:checked').val() == 'production') ?
 			'https://coelibrary.herokuapp.com/app/githubdeploy' :
 			'https://coelibrary-sandbox.herokuapp.com/app/githubdeploy';
 	sfdeployurl+= '/' + ownerName + '/' + repoName + (refName != '' ? '?ref=' + refName : '');
@@ -24,7 +24,6 @@ function githubdeploy()
 
 function load()
 {
-
 	// Default from URL
 	ownerName = $.url().param('owner');
 	repoName = $.url().param('repo');
@@ -61,12 +60,12 @@ function load()
 	<legend class="form-element__legend slds-form-element__label">Deploy to:</legend>
 	<div class="slds-form-element__control">
 	<label class="slds-radio">
-		<input type="radio" id="production" name="environment" checked="true" value="production">
+		<input type="radio" name="environment" checked="true" value="production">
 		<span class="slds-radio--faux"></span>
 		<span class="slds-form-element__label">Production / Developer</span>
 	</label>
 	<label class="slds-radio">
-		<input type="radio" id="sandbox" name="environment" value="sandbox">
+		<input type="radio" name="environment" checked="false" value="sandbox">
 		<span class="slds-radio--faux"></span>
 		<span class="slds-form-element__label">Sandbox</span>
 	</label>
