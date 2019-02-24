@@ -147,9 +147,15 @@ public class GitHubSalesforceDeployController {
 		{
 			map.put("repo", null);
 			map.put("githubcontents", null);
-			//String accessToken = (String)session.getAttribute(GITHUB_TOKEN);
-			//Set Personal Token in GitHub to avoid logging in.
-			String accessToken = (String)System.getenv(GITHUB_TOKEN);
+			
+			String accessToken;
+		//Set Personal Token in GitHub to avoid logging in.
+			if((String)System.getenv(GITHUB_TOKEN) != null){
+					accessToken = (String)System.getenv(GITHUB_TOKEN);
+			}
+			else{
+					accessToken = (String)session.getAttribute(GITHUB_TOKEN);
+			}
 
 			// Repository name
 			RepositoryId repoId = RepositoryId.create(repoOwner, repoName);
