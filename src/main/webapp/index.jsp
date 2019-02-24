@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>GitHub Salesforce Deploy Tool</title>
+    <title>Deploy to your org</title>
 	<script src="/resources/js/jquery-1.7.1.min.js"></script>
 	<script src="/resources/js/purl.js"></script>
 	<link rel="stylesheet" type="text/css" href="/resources/assets/styles/salesforce-lightning-design-system.css">
@@ -92,10 +92,6 @@ function load()
 				  <svg aria-hidden="true" class="slds-icon slds-icon-action-upload slds-icon--large slds-p-around--x-small">
 				    <use xlink:href="/resources/assets/icons/action-sprite/svg/symbols.svg#upload"></use>
 				  </svg>
-				</div>
-				<div class="slds-media__body">
-				  <p class="slds-page-header__title slds-truncate slds-align-middle">GitHub Salesforce Deploy Tool</p>
-				  <p class="slds-text-body--small slds-page-header__info">Deploy directly from GitHub to Salesforce <a target="_new" href="http://andyinthecloud.com/category/githubsfdeploy/" class="brand" id="heroku"><strong>andyinthecloud</strong></a></p>
 				</div>
 			</div>			
 		</div>
