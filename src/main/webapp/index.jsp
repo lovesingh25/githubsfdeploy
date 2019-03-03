@@ -34,9 +34,8 @@ function load()
 }
 </script>
 
-<body style="background-color:DEEP_COVE;" onload="load();">
-<form onsubmit="loginToSalesforce();return false;">
-
+<body onload="load();">
+<form style="background-color:DEEP_COVE;" class="slds-card slds-m-around_large" onsubmit="loginToSalesforce();return false;">
 <div class="demo-only" style="height: 640px;">
 	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
 	<div class="slds-modal__container">
@@ -72,7 +71,6 @@ function load()
 	</section>
 	<div class="slds-backdrop slds-backdrop_open"></div>
 	</div>
-
 </form>
 </body>
 </html>
