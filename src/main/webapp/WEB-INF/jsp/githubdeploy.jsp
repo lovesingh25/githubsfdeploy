@@ -22,7 +22,7 @@
 	<div class="slds-card__header slds-grid">
 	<header class="slds-media slds-media_center slds-has-flexi-truncate">
 	<div class="slds-media__body slds-clearfix">
-			<span class="slds-avatar slds-avatar--large slds-float_left">
+			<span style="width: 9%; height: 20%;" class="slds-float_left">
 					<img src="/resources/img/coe.jpg" alt="CoE" />
 				  </span>
 	</div>

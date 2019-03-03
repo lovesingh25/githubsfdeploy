@@ -40,10 +40,10 @@ function load()
 	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
 	<div class="slds-modal__container">
 	<header class="slds-modal__header slds-clearfix">
-			<span class="slds-avatar slds-avatar--large slds-float_left">
+			<span style="width: 20%; height: 30%;" class="slds-float_left">
 					<img src="/resources/img/coe.jpg" alt="CoE" />
 				  </span>
-	<span> 			  
+	<span class="slds-float_center"> 			  
 	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Quick Deploy</h2>
 </span>
 	</header>
