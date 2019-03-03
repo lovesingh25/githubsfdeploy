@@ -40,7 +40,7 @@ function load()
 	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
 	<div class="slds-modal__container">
 	<header class="slds-modal__header slds-clearfix">
-			<span class="slds-avatar slds-avatar--medium slds-float_left">
+			<span class="slds-avatar slds-avatar--large slds-float_left">
 					<img src="/resources/img/coe.jpg" alt="CoE" />
 				  </span>
 	<span> 			  

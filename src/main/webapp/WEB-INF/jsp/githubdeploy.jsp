@@ -22,13 +22,9 @@
 	<div class="slds-card__header slds-grid">
 	<header class="slds-media slds-media_center slds-has-flexi-truncate">
 	<div class="slds-media__body slds-clearfix">
-			<span class="slds-avatar slds-avatar--medium slds-float_left">
+			<span class="slds-avatar slds-avatar--large slds-float_left">
 					<img src="/resources/img/coe.jpg" alt="CoE" />
 				  </span>
-	<h2 class="slds-card__header-title">
-	<span>To Salesforce Org</span>
-	</a>
-	</h2>
 	</div>
 	<div class="slds-no-flex">
 		<c:if test="${githubcontents != null}">
@@ -38,12 +34,13 @@
 	</header>
 	</div>
 	<div class="slds-card__body slds-card__body_inner">
+			<span>Salesforce Org Details</span>
 			<ul>
 				<li class="slds-tile slds-hint-parent">
 					<div class="slds-tile__detail">
 							<dl class="slds-dl--horizontal slds-text-body--small">
 								<dt class="slds-dl--horizontal__label">
-									<p class="slds-truncate">Organization Name:</p>
+									<p class="slds-truncate">Name:</p>
 								</dt>
 								<dd class="slds-dl--horizontal__detail slds-tile__meta">
 									<p class="slds-truncate">
@@ -51,7 +48,7 @@
 									</p>
 								</dd>
 								<dt class="slds-dl--horizontal__label">
-									<p class="slds-truncate">User Name:</p>
+									<p class="slds-truncate">User:</p>
 								</dt>
 								<dd class="slds-dl--horizontal__detail slds-tile__meta">
 									<p class="slds-truncate">
