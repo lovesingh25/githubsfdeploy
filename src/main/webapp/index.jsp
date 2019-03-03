@@ -44,7 +44,7 @@ function load()
 					<img src="/resources/img/coe.jpg" alt="CoE" />
 				  </span>
 	<span> 			  
-	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">CoE oneClick Deploy</h2>
+	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Quick Deploy</h2>
 </span>
 	</header>
 
