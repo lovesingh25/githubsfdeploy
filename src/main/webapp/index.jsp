@@ -41,19 +41,27 @@ function load()
 	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
 	<div class="slds-modal__container">
 	<header class="slds-modal__header">
-	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Deploy to:</h2>
+	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">COE oneClick Deploy</h2>
 	</header>
 	<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-		<label class="slds-radio">
-			<input type="radio" name="environment" checked="true" value="production">
-			<span class="slds-radio--faux"></span>
-			<span class="slds-form-element__label">Production / Developer</span>
-		</label>
-		<label class="slds-radio">
-			<input type="radio" name="environment" checked="false" value="sandbox">
-			<span class="slds-radio--faux"></span>
-			<span class="slds-form-element__label">Sandbox</span>
-		</label>
+		<fieldset class="slds-form-element slds-clearfix">
+			<div class="slds-form-element__control slds-clearfix">
+			<div class="slds-radio_button-group slds-clearfix">
+			<span class="slds-button slds-radio_button slds-float_left">
+			<input name="environment" type="radio" id="production" value="production" />
+			<label class="slds-radio_button__label" for="production">
+			<span class="slds-radio_faux">Production/Developer</span>
+			</label>
+			</span>
+			<span class="slds-button slds-radio_button slds-float_right">
+			<input name="environment" type="radio" id="sandbox" value="sandbox" />
+			<label class="slds-radio_button__label" for="sandbox">
+			<span class="slds-radio_faux">Sandbox</span>
+			</label>
+			</span>
+			</div>
+			</div>
+			</fieldset>
 	</div>
 	<footer class="slds-modal__footer">
 		<input type="submit" id="login" value="Login to Salesforce" class="slds-button slds-button--neutral" onclick="githubdeploy();return false;"/>
@@ -64,6 +72,5 @@ function load()
 	</div>
 
 </form>
-
 </body>
 </html>
