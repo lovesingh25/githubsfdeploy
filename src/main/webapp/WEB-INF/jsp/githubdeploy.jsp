@@ -24,7 +24,7 @@
 	<div class="slds-media__figure">
 	<span class="slds-icon_container slds-icon-standard-account" title="account">
 	<svg class="slds-icon slds-icon_small" aria-hidden="true">
-	<use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+	<use xlink:href="/lightningCss/assets/icons/utility-sprite/svg/symbols.svg#company"></use>
 	</svg>
 	<span class="slds-assistive-text">To Salesforce Org</span>
 	</span>
