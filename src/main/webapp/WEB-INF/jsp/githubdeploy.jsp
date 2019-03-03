@@ -2,17 +2,6 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="header.jsp"/>
-	    <c:if test="${githubcontents != null}">
-	   	<div class="slds-col slds-no-flex slds-align-bottom">
-	      <div class="slds-button-group" role="group">
-	        <button id="deploy" class="slds-button slds-button--neutral" onclick="GitHubDeploy.deploy();">Deploy</button>
-	      </div>
-	    </div>		
-	    </c:if>
-	</div>
-</div>
-
-
 <c:if test="${error != null}">
 	<div class="slds-notify_container">
 		<div class="slds-notify slds-notify--alert slds-theme--alert-texture" role="alert">
@@ -22,54 +11,63 @@
 </c:if>
 &nbsp;
 
-<div class="slds-card">
+<article class="slds-card">
 	<div class="slds-card__header slds-grid">
-		<div class="slds-media slds-media--center slds-has-flexi-truncate">
-			<div class="slds-media__figure">
-				<svg aria-hidden="true"
-					class="slds-icon icon-utility-salesforce-1 slds-icon-text-default slds-icon--small">
-            		<use
-						xlink:href="/resources/lightningCss/assets/icons/utility-sprite/symbols.svg#company"></use>
-          		</svg>
-			</div>
-			<div class="slds-media__body">
-				<h2 class="slds-text-heading--small slds-truncate">To
-					Salesforce Org</h2>
-			</div>
-		</div>
+	<header class="slds-media slds-media_center slds-has-flexi-truncate">
+	<div class="slds-media__figure">
+	<span class="slds-icon_container slds-icon-standard-account" title="account">
+	<svg class="slds-icon slds-icon_small" aria-hidden="true">
+	<use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+	</svg>
+	<span class="slds-assistive-text">To Salesforce Org</span>
+	</span>
 	</div>
-	<div class="slds-card__body">
-		<ul>
-			<li class="slds-tile slds-hint-parent">
-				<div class="slds-tile__detail">
-					<dl class="slds-dl--horizontal slds-text-body--small">
-						<dt class="slds-dl--horizontal__label">
-							<p class="slds-truncate">Organization Name:</p>
-						</dt>
-						<dd class="slds-dl--horizontal__detail slds-tile__meta">
-							<p class="slds-truncate">
-								<c:out value="${userContext.getOrganizationName()}" />
-							</p>
-						</dd>
-						<dt class="slds-dl--horizontal__label">
-							<p class="slds-truncate">User Name:</p>
-						</dt>
-						<dd class="slds-dl--horizontal__detail slds-tile__meta">
-							<p class="slds-truncate">
-								<c:out value="${userContext.getUserName()}" />
-							</p>
-						</dd>
-					</dl>
-				</div>
-			</li>
-		</ul>
+	<div class="slds-media__body">
+	<h2 class="slds-card__header-title">
+	<span>To Salesforce Org</span>
+	</a>
+	</h2>
 	</div>
-</div>
-
-<c:if test="${githubcontents != null}">
-	<pre id="deploystatus" style="display: none"></pre>
-	<div id="githubcontents"></div>
-</c:if>
+	<div class="slds-no-flex">
+		<c:if test="${githubcontents != null}">
+				<button id="deploy" class="slds-button slds-button--neutral" onclick="GitHubDeploy.deploy();">Deploy</button>
+		</c:if>		
+	</div>
+	</header>
+	</div>
+	<div class="slds-card__body slds-card__body_inner">
+			<ul>
+				<li class="slds-tile slds-hint-parent">
+					<div class="slds-tile__detail">
+							<dl class="slds-dl--horizontal slds-text-body--small">
+								<dt class="slds-dl--horizontal__label">
+									<p class="slds-truncate">Organization Name:</p>
+								</dt>
+								<dd class="slds-dl--horizontal__detail slds-tile__meta">
+									<p class="slds-truncate">
+										<c:out value="${userContext.getOrganizationName()}" />
+									</p>
+								</dd>
+								<dt class="slds-dl--horizontal__label">
+									<p class="slds-truncate">User Name:</p>
+								</dt>
+								<dd class="slds-dl--horizontal__detail slds-tile__meta">
+									<p class="slds-truncate">
+										<c:out value="${userContext.getUserName()}" />
+									</p>
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+	</div>
+	<footer class="slds-card__footer">
+			<c:if test="${githubcontents != null}">
+					<pre id="deploystatus" style="display: none"></pre>
+					<div id="githubcontents"></div>
+				</c:if>
+	</footer>
+	</article>
 
 <c:if test="${githubcontents != null}">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
