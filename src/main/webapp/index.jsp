@@ -39,9 +39,15 @@ function load()
 <div class="demo-only" style="height: 640px;">
 	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
 	<div class="slds-modal__container">
-	<header class="slds-modal__header">
-	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">COE oneClick Deploy</h2>
+	<header class="slds-modal__header slds-clearfix">
+			<span class="slds-avatar slds-avatar--medium slds-float_left">
+					<img src="/resources/assets/images/coe.png" alt="person name" />
+				  </span>
+	<span> 			  
+	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">CoE oneClick Deploy</h2>
+</span>
 	</header>
+
 	<div class="slds-modal__content slds-p-around_medium slds-clearfix" id="modal-content-id-1">
 		<fieldset class="slds-form-element slds-clearfix">
 			<div class="slds-form-element__control slds-clearfix">

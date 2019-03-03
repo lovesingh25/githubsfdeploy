@@ -29,7 +29,10 @@
 	<span class="slds-assistive-text">To Salesforce Org</span>
 	</span>
 	</div>
-	<div class="slds-media__body">
+	<div class="slds-media__body slds-clearfix">
+			<span class="slds-avatar slds-avatar--medium slds-float_left">
+					<img src="/resources/assets/images/coe.png" alt="person name" />
+				  </span>
 	<h2 class="slds-card__header-title">
 	<span>To Salesforce Org</span>
 	</a>
