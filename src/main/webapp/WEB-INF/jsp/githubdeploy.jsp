@@ -1,7 +1,14 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<jsp:include page="header.jsp"/>
+<html>
+<head>
+  <title>Deploy to your org</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/resources/lightningCss/assets/styles/salesforce-lightning-design-system.css">
+	
+</head>
+<body>
 <c:if test="${error != null}">
 	<div class="slds-notify_container">
 		<div class="slds-notify slds-notify--alert slds-theme--alert-texture" role="alert">
@@ -181,7 +188,5 @@
 
 	</script>
 </c:if>
-
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </html>
