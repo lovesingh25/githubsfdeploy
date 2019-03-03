@@ -49,7 +49,7 @@ function load()
 			<div class="slds-radio_button-group slds-float_left slds-m-horizontal_large">
 			<span class="slds-button slds-radio_button">
 			<input name="environment" type="radio" id="production" value="production" />
-			<label class="slds-radio_button__label slds-box" for="production">
+			<label class="slds-radio_button__label" for="production">
 			<span class="slds-radio_faux">Production/Developer</span>
 			</label>
 			</span>
@@ -57,7 +57,7 @@ function load()
 		<div class="slds-radio_button-group slds-float_right slds-m-horizontal_large">
 			<span class="slds-button slds-radio_button">
 			<input name="environment" checked ="true" type="radio" id="sandbox" value="sandbox" />
-			<label class="slds-radio_button__label slds-box" for="sandbox">
+			<label class="slds-radio_button__label" for="sandbox">
 			<span class="slds-radio_faux">Sandbox</span>
 			</label>
 			</span>

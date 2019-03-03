@@ -29,7 +29,7 @@
 				<svg aria-hidden="true"
 					class="slds-icon icon-utility-salesforce-1 slds-icon-text-default slds-icon--small">
             		<use
-						xlink:href="/resources/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"></use>
+						xlink:href="/resources/lightningCss/assets/icons/utility-sprite/symbols.svg#company"></use>
           		</svg>
 			</div>
 			<div class="slds-media__body">
