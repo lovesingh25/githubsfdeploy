@@ -34,7 +34,7 @@ function load()
 }
 </script>
 
-<body style="margin:10px" onload="load();">
+<body style="background-color:DEEP_COVE;" onload="load();">
 <form onsubmit="loginToSalesforce();return false;">
 
 <div class="demo-only" style="height: 640px;">
@@ -43,19 +43,21 @@ function load()
 	<header class="slds-modal__header">
 	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">COE oneClick Deploy</h2>
 	</header>
-	<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+	<div class="slds-modal__content slds-p-around_medium slds-clearfix" id="modal-content-id-1">
 		<fieldset class="slds-form-element slds-clearfix">
 			<div class="slds-form-element__control slds-clearfix">
-			<div class="slds-radio_button-group slds-clearfix">
-			<span class="slds-button slds-radio_button slds-float_left">
+			<div class="slds-radio_button-group slds-float_left slds-m-horizontal_large">
+			<span class="slds-button slds-radio_button">
 			<input name="environment" type="radio" id="production" value="production" />
-			<label class="slds-radio_button__label" for="production">
+			<label class="slds-radio_button__label slds-box" for="production">
 			<span class="slds-radio_faux">Production/Developer</span>
 			</label>
 			</span>
-			<span class="slds-button slds-radio_button slds-float_right">
-			<input name="environment" type="radio" id="sandbox" value="sandbox" />
-			<label class="slds-radio_button__label" for="sandbox">
+		</div>
+		<div class="slds-radio_button-group slds-float_right slds-m-horizontal_large">
+			<span class="slds-button slds-radio_button">
+			<input name="environment" checked ="true" type="radio" id="sandbox" value="sandbox" />
+			<label class="slds-radio_button__label slds-box" for="sandbox">
 			<span class="slds-radio_faux">Sandbox</span>
 			</label>
 			</span>
