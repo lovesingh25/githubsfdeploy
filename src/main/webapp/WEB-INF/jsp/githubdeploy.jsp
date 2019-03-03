@@ -21,17 +21,9 @@
 <article class="slds-card slds-m-around_large">
 	<div class="slds-card__header slds-grid">
 	<header class="slds-media slds-media_center slds-has-flexi-truncate">
-	<div class="slds-media__figure">
-	<span class="slds-icon_container slds-icon-standard-account" title="account">
-	<svg class="slds-icon slds-icon_small" aria-hidden="true">
-	<use xlink:href="/lightningCss/assets/icons/utility-sprite/svg/symbols.svg#company"></use>
-	</svg>
-	<span class="slds-assistive-text">To Salesforce Org</span>
-	</span>
-	</div>
 	<div class="slds-media__body slds-clearfix">
 			<span class="slds-avatar slds-avatar--medium slds-float_left">
-					<img src="/resources/assets/images/coe.png" alt="person name" />
+					<img src="/resources/assets/images/coe.png" alt="CoE" />
 				  </span>
 	<h2 class="slds-card__header-title">
 	<span>To Salesforce Org</span>

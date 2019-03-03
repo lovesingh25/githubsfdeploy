@@ -41,7 +41,7 @@ function load()
 	<div class="slds-modal__container">
 	<header class="slds-modal__header slds-clearfix">
 			<span class="slds-avatar slds-avatar--medium slds-float_left">
-					<img src="/resources/assets/images/coe.png" alt="person name" />
+					<img src="/resources/assets/images/coe.png" alt="CoE" />
 				  </span>
 	<span> 			  
 	<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">CoE oneClick Deploy</h2>
