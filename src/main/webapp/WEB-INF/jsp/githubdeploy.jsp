@@ -23,7 +23,7 @@
 	<header class="slds-media slds-media_center slds-has-flexi-truncate">
 	<div class="slds-media__body slds-clearfix">
 			<span class="slds-avatar slds-avatar--medium slds-float_left">
-					<img src="/resources/assets/images/coe.png" alt="CoE" />
+					<img src="/resources/img/coe.jpg" alt="CoE" />
 				  </span>
 	<h2 class="slds-card__header-title">
 	<span>To Salesforce Org</span>
